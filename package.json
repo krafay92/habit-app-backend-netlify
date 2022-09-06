@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "./node_modules/.bin/netlify-lambda serve src",
-    "build": "./node_modules/.bin/"
+    "build": "./node_modules/.bin/netlify_lambda build src"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
