@@ -1,9 +1,10 @@
 const connectToMongo = require('./db');
 const cors = require('cors');
-connectToMongo();
-
 const express = require('express');
 const app = express();
+const serverless = require('serverless-http');
+
+connectToMongo();
 
 app.use(express.json());
 app.use(cors());
@@ -15,6 +16,8 @@ app.use('/api/habit', require('./routes/habit'));
 
 const PORT = process.env.PORT || 5000;
 
-app.listen(PORT, () => {
-    console.log(`Habit Tracker listening on ${PORT}`)
-})
+// app.listen(PORT, () => {
+//     console.log(`Habit Tracker listening on ${PORT}`)
+// })
+
+module.exports.handler = serverless(app);

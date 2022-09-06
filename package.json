@@ -4,8 +4,8 @@
   "description": "An App that will track your habits",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "./node_modules/.bin/netlify-lambda serve src",
+    "build": "./node_modules/.bin/netlify_lambda build src"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -14,9 +14,21 @@
     "express": "^4.18.1",
     "express-validator": "^6.14.2",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^6.4.0"
+    "mongoose": "^6.4.0",
+    "netlify-lambda": "^2.0.15",
+    "serverless-http": "^3.0.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.19"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krafay92/habit-app-backend-netlify.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/krafay92/habit-app-backend-netlify/issues"
+  },
+  "homepage": "https://github.com/krafay92/habit-app-backend-netlify#readme"
 }
