@@ -11,6 +11,11 @@ app.use(cors());
 
 require('dotenv').config();
 
+app.get('/', (req, res) => {
+    res.json({
+        "where": "home"
+    })
+})
 app.use('/.netlify/functions/api/auth', require('../routes/auth'));
 app.use('/.netlify/functions/api/habit', require('../routes/habit'));
 
